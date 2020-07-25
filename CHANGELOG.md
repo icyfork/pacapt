@@ -1,6 +1,91 @@
+## v2.4.3
+
+* `lib/homebrew`: Support `cask` (fix #117)
+* `tests/dpkg`: Support new distros, drop support for old distro
+
+## v2.4.2
+
+* Update README.md
+* Support sysget-style sub commands (`pacapt install`, `pacapt upgrade`,...)
+* `lib/homebrew/Rs`: Improvements (#124, @Mnkai)
+* `lib/dpkg`: Use `dist-upgrade` for `Suy` and `Su` operations
+
+## v2.4.0
+
+* `lib/tlmgr`: Add TeXLive support (Antony Lee)
+* `lib/conda`: Conda support (Antony Lee)
+
+For developers:
+
+* Ability to support non-system package manager (`npm`, `gem`, ...)
+* Reduce shellcheck warning/error reports
+
+## v2.3.15
+
+* A warm up release with very minor updates.
+
+## v2.3.14
+
+* `lib/homebrew`: `brew upgrade` is equivalant to `brew upgrade --all`.
+  See #90 and #101.
+* Support `Clear Linux`. See #94.
+
+For developers:
+
+* Add Travis support
+* Add and update test cases for Ubuntu 16.04, Ubuntu 14.04
+
+## v2.3.13
+
+* `lib/dpkg`: Fix `-Qs` for old `dpkg`.
+
+For developers:
+
+* Test scripts can now be automated thanks to `tests/*`;
+* `tests/slitz40`: Add;
+* `tests/dpkg`: Update.
+
+## v2.3.12
+
+* `lib/dpkg`: Fix #84 (incorrect implementation of `-Qs`.)
+
+For developers:
+
+* `bin/gen_tests.rb`: Add;
+* `lib/dpkg`: Add and update test cases;
+* `CONTRIBUTING`: Add new section `Writting test cases`.
+
+## v2.3.11
+
+* `lib/tazpkg`: Improve `-U`.
+
+## v2.3.10
+
+* `lib/tazpkg`: Support `-Scc`.
+
+## v2.3.9
+
+* `lib/tazpkg`: Support `SliTaz` distribution.
+
+For developers:
+
+* `contrib/*`: Add instructions to build packages on some distributions (Credit: `Pival81`).
+
+## v2.3.8
+
+* `lib/alpine`: Support `Alpine` distirubtion (Credit: `Carl X. Su`, `Cuong Manh Le`);
+* `lib/dnf`: Support new package manager on `Fedora` system (Credit: `Huy Ngô`);
+* `lib/termux`: Support `termux` on Android (Credit: `Jiawei Zhou`);
+* `lib/zypper`: New option `-Sw` (Forgot to merge #72);
+* `lib/yum`: New option `-Qs` (Credit: `Siôn Le Roux`);
+
+For developers:
+
+* Improve translation method `_translate_all`;
+
 ## v2.2.7
 
-* `lib/zypper`: Complete query/removal options (Thanks to `Janne Heß`);
+* `lib/zypper`: Complete query/removal options (Credit: `Janne Heß`);
 * `lib/cave`: Fix an issue with `-R` option;
 * New option `--noconfirm` to help non-interactive scripts (Cf. #43).
   Currently available for `pkgng`, `yum`, `dpkg` and `zypper`.
@@ -16,7 +101,7 @@ For developers:
 
 ## v2.1.6
 
-* `lib/sun_tools`: `SunOS` support (Thanks to `Daniel YC Lin`);
+* `lib/sun_tools`: `SunOS` support (Credit: `Daniel YC Lin`);
 * Fix a minor bug related to argument parsing (4287ff16e869a0960ea54233);
 * Improve documentation;
 * `lib/dnf`: Add some initial support;
@@ -32,7 +117,7 @@ For developers:
 
 ## v2.0.4
 
-* `openbsd/pkg_tools`: Add (Thanks to `Somasis`);
+* `openbsd/pkg_tools`: Add (Credit: `Somasis`);
 * `homebrew/Su*`: Use `--all` flag when upgrading;
 * `homebrew/*`: Some typo fixes;
 * `compile.sh`: `git` becomes optional (useful for `docker` tester.);
@@ -50,7 +135,7 @@ For developers:
 
 ## v2.0.2
 
-* `lib/zz_main`: Fix quoting issue (Thanks to `Cuong Manh Le`).
+* `lib/zz_main`: Fix quoting issue (Credit: `Cuong Manh Le`).
 
 ## v2.0.1
 
